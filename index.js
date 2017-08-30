@@ -4,6 +4,7 @@ function updateObjectWithKeyAndValue(object, key, value) {
   var pair = {key : value};
   var clone = object;
   var newObj = Object.assign(clone, pair);
+  return newObj; 
 }
 
 function destructielyUpdateObjectWithKeyAndValue(object, key, value) {
@@ -13,5 +14,7 @@ function destructielyUpdateObjectWithKeyAndValue(object, key, value) {
 
 function deleteFromObjectByKey(object, key) {
   var clone = object;
+  delete clone[key];
+  return clone;
 
 }
