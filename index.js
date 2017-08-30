@@ -3,7 +3,7 @@ var recipes = {};
 function updateObjectWithKeyAndValue(object, key, value) {
   var pair = {};
   pair[key] = value;
-  var clone = object;
+  var clone = Object.assign({}, object);
   var newObj = Object.assign(clone, pair);
   return newObj;
 }
