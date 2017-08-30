@@ -1,7 +1,8 @@
 var recipes = {};
 
 function updateObjectWithKeyAndValue(object, key, value) {
-  var pair = {key : value};
+  var pair = {};
+  pair[key] = value;
   var clone = object;
   var newObj = Object.assign(clone, pair);
   return newObj;
@@ -20,5 +21,5 @@ function deleteFromObjectByKey(object, key) {
 
 function destructivelyDeleteFromObjectByKey(object, key) {
   delete object[key];
-  return object; 
+  return object;
 }
